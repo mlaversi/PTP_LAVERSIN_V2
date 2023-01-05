@@ -20,6 +20,8 @@ My accuracy isn't so high because i didn't have the good version of numpy and pa
 
 98/98 [==============================] - ETA: 0s - loss: 3.3754 - accuracy: 0.1346
 
-My pist of ameliorations would be : 
+My pist of ameliorations would be at first : 
+
+
     -https://docs.github.com/en/packages/quickstart to create a github workflow and after 
     - a docker repository for the user with the command docker pull ghcr.io/...mypoctoprodproject
