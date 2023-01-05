@@ -20,8 +20,16 @@ My accuracy isn't so high because i didn't have the good version of numpy and pa
 
 98/98 [==============================] - ETA: 0s - loss: 3.3754 - accuracy: 0.1346
 
+If you want to train your model on a csv you have to specify in Pycharm the paths he asked for training, you can acess easily on the parameters. Or the the terminal you can add a line like this 
+
+                python train/train/run.py "PATH/stackoverflow_posts.csv" train/conf/train-conf.yml "train/data/artefacts/"
+
+
 My pist of ameliorations would be at first : 
 
 
     -https://docs.github.com/en/packages/quickstart to create a github workflow and after 
     - a docker repository for the user with the command docker pull ghcr.io/...mypoctoprodproject
+
+
+Thank you for the class, I hope we'll see one day ! 
