@@ -117,11 +117,11 @@ class TestLocalTextCategorizationDataset(unittest.TestCase):
 
     def test_get_train_batch_raises_assertion_error(self):
         pd.read_csv = MagicMock(return_value=pd.DataFrame({
-            'post_id': ['id_1', 'id_2', 'id_3', 'id_4', 'id_5', 'id_6'],
-            'tag_name': ['tag_a', 'tag_b', 'tag_a', 'tag_a', 'tag_b', 'tag_b'],
-            'tag_id': [1, 2, 1, 1, 2, 2],
-            'tag_position': [1, 1, 1, 1, 1, 1],
-            'title': ['title_1', 'title_2', 'title_3', 'title_4', 'title_5', 'title_6']
+            'post_id': ['id_1', 'id_2'],
+            'tag_name': ['tag_a', 'tag_a'],
+            'tag_id': [1, 2],
+            'tag_position': [0, 0],
+            'title': ['title_1', 'title_2']
         }))
 
         with self.assertRaises(AssertionError):

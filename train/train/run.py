@@ -37,7 +37,10 @@ def train(dataset_path, train_conf, model_path, add_timestamp):
 
     # TODO: CODE HERE
     # instantiate a LocalTextCategorizationDataset, use embed method from preprocessing module for preprocess_text param
-    # use train_conf for other needed params
+    # use train_conf for other needed params, well explained
+
+    # First import the class and after check all the conditions we filled at first.
+
     dataset = LocalTextCategorizationDataset(dataset_path, batch_size=train_conf['batch_size'],
                                              min_samples_per_label=train_conf['min_samples_per_label'],
                                              preprocess_text=embed)
@@ -70,7 +73,7 @@ def train(dataset_path, train_conf, model_path, add_timestamp):
     logger.info("Test Accuracy: {:.2f}".format(scores[1] * 100))
 
     # TODO: CODE HERE
-    # create folder artefacts_path
+    # create folder artefacts_path, here's i had some problems of overwritting.
     try:
         os.makedirs(artefacts_path)
     except:
