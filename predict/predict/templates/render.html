@@ -4,13 +4,22 @@
     <title>bla project</title>
   </head>
   <body>
-    <p >Hello, welcome to the poc to prod project</p>
+    <p >Hello, welcome to the poc to prod project of Mathieu Laversin </p>
     <p>All tests are good, but the predict function is still not working, i don't know why? .</p>
   <ul>
+    <p>Here's are the step of acomplishement and failure.</p>
   <li style="color: green ;"> Test utils and embeddings are OK </li>
-  <li style="color: green ;"> Test predict is OK </li>
+    <li style="color: green ;"> Run is ok when we input data with the file "stackoverflow_posts.csv" </li>
+  <li style="color: green ;"> Test predict is OK, I Had a problem and see the read me to see what i did to solve it </li>
   <li style="color: green ;"> Test model train is OK </li>
-    <li style="color: red ;"> Test model train is OK </li>
+    <li style="color: red ;"> Link the predictions to app and print them isn't working well, the error I have is "Method Not Allowed"</li>
+    <p >Perhaps during those week I change something in the file directory and it doesn't work anymore. </p>
 </ul>
+  <form name = "Predictions" action="." method="POST">
+    <label>Insert the text you want to predict</label>
+    <input name="text" value="{{ request.form['text'] }}"></input>
+    <button type="submit">Obtain your predictions</button>
+
+</form>
   </body>
 </html>

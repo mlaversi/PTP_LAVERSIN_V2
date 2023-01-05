@@ -9,13 +9,12 @@ def home():
 def predict_html():
     return render_template('render.html')
 
-@app.route("/predict", methods=['POST'])
-def get_prediction():
-    #1.
-    model = TextPredictionModel.from_artefacts("train/data/artefacts/train/2023-01-03-22-59-05")
-    text = request.form['text']
-    predictions = model.predict([text], top_k=3)
 
+@app.route("/predict",methods=["GET"])
+def request_prediction():
+    model = TextPredictionModel.from_artefacts("train/data/artefacts/2023-01-03-12-42-59")
+    text = request.args.get('text')
+    predictions = model.predict([text])
     return str(predictions)
 
 if __name__ == '__main__':

@@ -28,16 +28,16 @@ class TextPredictionModel:
             from training artefacts, returns a TextPredictionModel object
             :param artefacts_path: path to training artefacts
         """
-        # TODO: CODE HERE
+        # TODO: OK
         # load model
         model = load_model(f"{artefacts_path}/model.h5")
 
-        # TODO: CODE HERE
+        # TODO: OK
         # load params
 
         params = json.load(open(os.path.join(artefacts_path, 'params.json'), 'rb'))
 
-        # TODO: CODE HERE
+        # TODO: OK
         # load labels_to_index
         labels_to_index = json.load(open(os.path.join(artefacts_path, 'labels_index.json'), 'rb'))
 
@@ -53,20 +53,28 @@ class TextPredictionModel:
 
         logger.info(f"Predicting text_list=`{text_list}`")
 
-        # TODO: CODE HERE
+        # TODO: OK
         # embed text_list
         embeddings = embed(text_list)
 
-        # TODO: CODE HERE
+        # TODO: OK
         # predict tags indexes from embeddings
         predictions = self.model.predict(embeddings)
         #print(predict_embeddings)
 
-        # TODO: CODE HERE
+        # TODO: NOT OK BUT Idea Correct but not implementable, here' the trace of what i try to do.
         # from tags indexes compute top_k tags for each text
-        #sorted_indexes = argsort(predict_embeddings)[-top_k:]
-        #predict_embeddings = np.array(predict_embeddings)
-        #predictions = predict_embeddings[sorted_indexes]
+
+        #tag_pred = self.model.predict(embeddings)
+
+
+        # from tags indexes compute top_k tags for each text
+
+        #tags_indexes = argsort(tag_pred)
+        #top_tags_indexes = tags_indexes[0][-top_k:]
+
+        #predictions = [self.labels_index_inv[index] for index in top_tags_indexes]
+
 
         logger.info("Prediction done in {:2f}s".format(time.time() - tic))
 
