@@ -5,6 +5,7 @@ from run import TextPredictionModel
 def home():
     return render_template('render.html')
 
+#Doesn't work but it's explained in the ReadMe
 @app.route('/predict')
 def predict_html():
     return render_template('render.html')

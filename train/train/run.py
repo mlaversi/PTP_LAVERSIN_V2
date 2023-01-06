@@ -121,3 +121,9 @@ if __name__ == "__main__":
     logger.info(f"Training model with parameters: {train_params}")
 
     train(args.dataset_path, train_params, args.artefacts_path, args.add_timestamp)
+
+#If you want to launch :
+
+#"C:\Users\mathi\OneDrive\Bureau\poc-to-prod-capstone\train\data\training-data\stackoverflow_posts.csv"
+#"C:\Users\mathi\OneDrive\Bureau\poc-to-prod-capstone\train\conf\train-conf.yml"
+#"C:\Users\mathi\OneDrive\Bureau\poc-to-prod-capstone\train\data\artefacts"

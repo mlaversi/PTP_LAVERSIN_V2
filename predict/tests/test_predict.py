@@ -2,6 +2,9 @@ import unittest
 from unittest.mock import MagicMock
 import tempfile
 import pandas as pd
+
+#Import the library 
+
 from predict.predict import run
 from train.train import run as train_run
 from preprocessing.preprocessing import utils
@@ -32,7 +35,7 @@ class TestPredict(unittest.TestCase):
     utils.LocalTextCategorizationDataset.load_dataset = MagicMock(return_value=load_dataset_mock())
 
     def test_predict(self):
-        # TODO: CODE HERE
+        # TODO: OK
         # create a dictionary params for train conf
         params = {
             "batch_size": 1,
@@ -51,8 +54,9 @@ class TestPredict(unittest.TestCase):
             textpredictmodel = run.TextPredictionModel.from_artefacts(model_dir)
 
             # run a prediction
-            predictions_obtained = textpredictmodel.predict(['should I use a Group By?'], 0)
-            print(predictions_obtained)
+            predictions_obtained = textpredictmodel.predict(['should I use a Group By?'], 0) #Example taken from the stack
+
+            print("The prediction is ", predictions_obtained)
 
 
 
