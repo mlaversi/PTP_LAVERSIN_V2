@@ -2,6 +2,7 @@
 
 How to run my project : That's a classic project I invite you to git clone it on your computer and try to launch the test
 
+If you want to launch the app and another model, please put the entire path in the TextPredictionModel.from_artefacts(path)
 
 How to launch the test :
 
@@ -12,9 +13,9 @@ How to launch the test :
 What is wrong : 
 
     - Top k predictions 
-    - Linked the model to the app 
+
     
-I think i did the most difficult and i'm stopped here. If you can help me it would be great, i sent you some messages on teams and on email. If you have time to explain me it would be so great. I didn't want to take someone works so i let it like this and explain you in the html file. 
+I think i did the most difficult and i'm stopped here. If you can help me it would be great, i sent you some messages on teams and on email. If you have time to explain me it would be so great. 
 
 My accuracy isn't so high because i didn't have the good version of numpy and pandas accorded. But after the test with the stackover_flow file i have 
 
