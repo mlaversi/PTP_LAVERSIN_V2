@@ -6,7 +6,8 @@ from run import TextPredictionModel
 
 
 
-# Doesn't work but it's explained in the ReadMe
+# It works but not the top k...
+
 
 @app.route("/", methods=['POST', 'GET'])
 def index():
